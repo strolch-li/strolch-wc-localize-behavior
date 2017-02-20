@@ -1,0 +1,24 @@
+<link rel="import" href="../app-localize-behavior/app-localize-behavior.html">
+
+<script>
+    // global variables holding the language tag and the URL to the locales.json
+    var strolchLocalLanguage = undefined;
+    var strolchLocalResourceUrl = undefined;
+
+    // custom behaviour accessing the configuration above
+    StrolchLocalizeBehaviorImpl = {
+        attached: function() {
+            if(!strolchLocalLanguage || !strolchLocalResourceUrl) {
+                console.log("warning: localization not configured");
+                return;
+            }
+
+            // load the language resource of the configured language
+            this.language = strolchLocalLanguage;
+            this.loadResources(strolchLocalResourceUrl);
+        }
+    };
+
+    // inherit the behavior of the standard polymer localization
+    StrolchLocalizeBehavior = [Polymer.AppLocalizeBehavior, StrolchLocalizeBehaviorImpl];
+</script>

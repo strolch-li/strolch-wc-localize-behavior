@@ -1,0 +1,22 @@
+{
+  "name": "strolch-localize-behavior",
+  "description": "Strolch Localization Behavior",
+  "version": "1.0.0",
+  "authors": "Franz Nieschalk",
+  "keywords": [
+    "strolch",
+    "localization"
+  ],
+  "main": "strolch-localize-behavior.html",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git@bitbucket.org:ontos4trees/strolch-localize-behavior.git"
+  },
+  "license": "https://bitbucket.org/ontos4trees/strolch-localize-behavior/LICENSE",
+  "homepage": "https://bitbucket.org/ontos4trees/strolch-localize-behavior",
+  "ignore": [],
+  "dependencies": {
+    "app-localize-behavior": "PolymerElements/app-localize-behavior#^0.10.0"
+  }
+}
