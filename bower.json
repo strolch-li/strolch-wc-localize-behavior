@@ -1,7 +1,7 @@
 {
   "name": "strolch-wc-localize-behavior",
   "description": "Strolch Polymer Localization Behavior extension",
-  "version": "1.0",
+  "version": "1.0.0",
   "authors": "Franz Nieschalk",
   "keywords": [
     "strolch",
