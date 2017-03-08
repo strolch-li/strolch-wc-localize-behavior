@@ -1,20 +1,20 @@
 {
-  "name": "strolch-localize-behavior",
-  "description": "Strolch Localization Behavior",
-  "version": "1.0.0",
+  "name": "strolch-wc-localize-behavior",
+  "description": "Strolch Polymer Localization Behavior extension",
+  "version": "1.0",
   "authors": "Franz Nieschalk",
   "keywords": [
     "strolch",
     "localization"
   ],
-  "main": "strolch-localize-behavior.html",
+  "main": "strolch-wc-localize-behavior.html",
   "private": false,
   "repository": {
     "type": "git",
-    "url": "git@bitbucket.org:ontos4trees/strolch-localize-behavior.git"
+    "url": "https://github.com/4treesCH/strolch-wc-localize-behavior.git"
   },
-  "license": "https://bitbucket.org/ontos4trees/strolch-localize-behavior/LICENSE",
-  "homepage": "https://bitbucket.org/ontos4trees/strolch-localize-behavior",
+  "license": "https://github.com/4treesCH/strolch-wc-localize-behavior/LICENSE",
+  "homepage": "https://github.com/4treesCH/strolch-wc-localize-behavior",
   "ignore": [],
   "dependencies": {
     "app-localize-behavior": "PolymerElements/app-localize-behavior#^0.10.0"
