@@ -1,4 +1,4 @@
-# strolch-localize-behavior
+# strolch-wc-localize-behavior
 Custom localization behavior for Strolch Polymer-Apps.
 
 ## Usage
