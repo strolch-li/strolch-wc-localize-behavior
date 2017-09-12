@@ -1,7 +1,7 @@
 {
   "name": "strolch-wc-localize-behavior",
   "description": "Strolch Polymer Localization Behavior extension",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "authors": [
     "Franz Nieschalk",
     "Robert von Burg"
@@ -20,6 +20,7 @@
   "homepage": "https://github.com/4treesCH/strolch-wc-localize-behavior",
   "ignore": [],
   "dependencies": {
-    "app-localize-behavior": "PolymerElements/app-localize-behavior#^0.10.0"
+    "strolchjs": "4treesCH/strolchjs#^0.2.0",
+    "app-localize-behavior": "PolymerElements/app-localize-behavior#^1.0.2"
   }
 }
