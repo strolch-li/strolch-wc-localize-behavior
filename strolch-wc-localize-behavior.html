@@ -4,14 +4,16 @@
 
     // custom behaviour accessing the configuration above
     StrolchLocalizeBehaviorImpl = {
-        attached: function() {
+        attached: function () {
             var locale = Strolch.getUserLocale();
 
             // load the language resource of the configured language
             this.language = locale;
             this.useKeyIfMissing = true;
-            console.log('Loading locales ' + this.localesPath);
-            this.loadResources(this.resolveUrl(this.localesPath));
+
+            if (Strolch.isNotEmptyString(this.localesPath)) {
+                this.loadResources(this.resolveUrl(this.localesPath));
+            }
         }
     };
 
