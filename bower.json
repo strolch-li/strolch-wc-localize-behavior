@@ -21,6 +21,7 @@
   "ignore": [],
   "dependencies": {
     "strolchjs": "4treesCH/strolchjs#^0.2.3",
+
     "app-localize-behavior": "PolymerElements/app-localize-behavior#^1.0.2"
   }
 }
