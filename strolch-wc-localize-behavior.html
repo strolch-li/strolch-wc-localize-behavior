@@ -4,18 +4,29 @@
 
     // custom behaviour accessing the configuration above
     StrolchLocalizeBehaviorImpl = {
+        properties: {
+            fallbackLanguage: {
+                type: String,
+                value: "en"
+            }
+        },
+        created: function () {
+            this.__computeLocalizeOld = this.__computeLocalize;
+            this.__computeLocalize = function (language, resources, formats) {
+                if (!resources[language])
+                    return this.__computeLocalizeOld(this.fallbackLanguage, resources, formats).bind(this);
+                return this.__computeLocalizeOld(language, resources, formats).bind(this);
+            }.bind(this);
+        },
         attached: function () {
-            var locale = Strolch.getUserLocale();
-            //console.log("Initializing for '" + this.localName + "' for locale " + locale + " and path " + this.localesPath);
-
             // load the language resource of the configured language
-            this.language = locale;
+            this.language = Strolch.getUserLocale();
             this.useKeyIfMissing = true;
 
             if (Strolch.isNotEmptyString(this.localesPath)) {
                 this.loadResources(this.resolveUrl(this.localesPath));
             }
-        }
+        },
     };
 
     // inherit the behavior of the standard polymer localization
