@@ -13,9 +13,24 @@
         created: function () {
             this.__computeLocalizeOld = this.__computeLocalize;
             this.__computeLocalize = function (language, resources, formats) {
+                var localizeFunc;
                 if (!resources[language])
-                    return this.__computeLocalizeOld(this.fallbackLanguage, resources, formats).bind(this);
-                return this.__computeLocalizeOld(language, resources, formats).bind(this);
+                    localizeFunc = this.__computeLocalizeOld(this.fallbackLanguage, resources, formats).bind(this);
+                localizeFunc = this.__computeLocalizeOld(language, resources, formats).bind(this);
+
+                return function () {
+                    var key = arguments[0];
+                    if (!key || !resources || !language || !resources[language])
+                        return;
+
+                    try {
+                        return localizeFunc.apply(this, arguments);
+                    } catch (e) {
+                        console.log("Failed to translate key " + key);
+                        console.log(e);
+                        return key;
+                    }
+                }.bind(this);
             }.bind(this);
         },
         attached: function () {
