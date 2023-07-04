@@ -20,8 +20,10 @@
 
                 return function () {
                     var key = arguments[0];
-                    if (!key || !resources || !language || !resources[language])
-                        return;
+                    if(!key)
+                        return "!!no-key!!";
+                    if (!resources || !language || !resources[language])
+                        return key;
 
                     try {
                         return localizeFunc.apply(this, arguments);
