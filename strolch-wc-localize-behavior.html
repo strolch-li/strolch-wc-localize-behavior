@@ -21,7 +21,7 @@
                 return function () {
                     var key = arguments[0];
                     if(!key)
-                        return "!!no-key!!";
+                        return;
                     if (!resources || !language || !resources[language])
                         return key;
 
